@@ -1,0 +1,34 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+ - title: Topnav
+   items:
+##     - title: GitHub
+##       external_url: https://github.com/
+##     - title: News
+##       url: /news
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: My Profile
+      folderitems:
+        - title: LinkedIn
+          external_url: https://www.linkedin.com/in/jimmy-sailo/
+        - title: About me
+          url: /index.html
+        - title: Skills and Career Growth
+          url: /my_resume.html
+        - title: My GitHub Repo
+          external_url: https://github.com/writarium/
+        - title: Product 2
+          url: /p2_landing_page.html
+    - title: Bookmarks
+      folderitems:
+        - title: Microsoft Writing Style Guide 
+          external_url: https://docs.microsoft.com/en-gb/style-guide/welcome/
+        - title: Google Documentation Style Guide 
+          external_url: https://developers.google.com/style/
+        - title: DITA Style Guide Best Practices for Authors 
+          external_url: https://www.oxygenxml.com/dita/styleguide/webhelp-feedback/
