@@ -274,7 +274,7 @@ entries:
         output: web
         subfolderitems:
 
-        - title: Introduction
+        - title: New Introduction
           url: /mydoc_app_admin_tool_index.html
           output: web, pdf
           type: homepage
