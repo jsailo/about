@@ -265,6 +265,10 @@ entries:
     output: web
     folderitems:
 
+    - title: Tag archives overview
+      url: /mydoc_tag_archives_overview.html
+      output: web
+
       subfolders:
       - title: Application Administrator tool
         output: web
@@ -298,3 +302,55 @@ entries:
         - title: Defining a business constant
           url: /mydoc_defining_business_constants.html
           output: web, pdf
+
+      - title: Business Objects Configuration three
+        output: web
+        subfolderitems:
+        - title: About business objects
+        url: /mydoc_about_business_objects.html
+        output: web, pdf
+
+        - title: Defining business objects
+        url: /mydoc_defining_business_objects.html
+        output: web, pdf
+
+
+      - title: Business Rules and Constants
+        output: web, pdf
+        subfolderitems:
+        - title: About business rules and constants
+        url: /mydoc_business_rules_constants.html
+        output: web, pdf
+
+        - title: Defining Business Rules in the Application Administrator tool
+        url: /mydoc_define_business_rule_app_admin_tool.html
+        output: web, pdf
+
+        - title: Configure the Logging
+        output: web, pdf
+        subfolderitems:
+
+        - title: About logs and log history
+        url: /mydoc_about_logs_and_log_history.html
+        output: web, pdf
+        - title: Working with log records
+        url: /mydoc_viewing_log_records.html
+        output: web, pdf
+
+      - title: Troubleshooting and FAQs
+        output: web, pdf
+        subfolderitems:
+        - title: Troubleshooting
+        url: /mydoc_troubleshooting.html
+        output: web, pdf
+        - title: FAQs
+        url: /mydoc_faq.html
+        output: web, pdf
+
+
+      - title: Appendix
+        output: web, pdf
+        subfolderitems:
+        - title: Sample Server-Side Business Rule
+        url: /mydoc_appendix_server_business_rule.html
+        output: web, pdf
