@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="After creating a business rule code in Microsoft Visual Studio, you need to define the business rule in Application Administrator tool.">
+<meta name="keywords" content=" logging on, logging on application administrator tool">
+<!-- <title>Defining Business Rules in the Application Administrator tool | Welcome to Writarium's Online Help</title> -->
+<title>Defining Business Rules in the Application Administrator tool</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Defining Business Rules in the Application Administrator tool page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Defining Business Rules in the Application Administrator tool">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -338,7 +338,7 @@
           
           
           
-          <li><a href="mydoc_define_business_rule_app_admin_tool.html">Defining Business Rules in the Application Administrator tool</a></li>
+          <li class="active"><a href="mydoc_define_business_rule_app_admin_tool.html">Defining Business Rules in the Application Administrator tool</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">Defining Business Rules in the Application Administrator tool</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">After creating a business rule code in Microsoft Visual Studio, you need to define the business rule in Application Administrator tool.</div>
    
 
     
@@ -469,46 +469,38 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
-
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
-
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
+  <h2 id="defining-a-business-rule">Defining a business rule</h2>
 
 <ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
+  <li>
+    <p>Start the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p>From the Business Rules category in the left pane, select Business Rules.</p>
+  </li>
+  <li>
+    <p>In the Class Name box, enter a unique class name identifier for this business rule.</p>
+  </li>
+  <li>
+    <p>Select the assembly from the Assembly list to which you want to link the class you named in step 3.</p>
+
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b>  Usually, the assembly linked to a business rule contains DLLs that, in turn, contain the actual compiled business rules</div>
+  </li>
+  <li>
+    <p>Click the Save icon.</p>
+
+    <p><img src="images/define_business_rule_app_admin_tool.png" alt="Jekyll" caption="This is a sample caption" /></p>
+  </li>
+  <li>
+    <p>To view the event generators using the selected business rule, select the Event Generators tab. The information displayed on the Event Generators tab is read-only. For more information, see Defining Event Generators.</p>
+  </li>
+  <li>
+    <p>To view any business objects associated with this business rule, select the Business Objects tab. The information displayed on the Business Objects tab is read-only. For more information, see To define a business object event and map it to a business rule.</p>
+  </li>
 </ol>
-
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
-
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
-
-<h2 id="users-and-groups">Users and Groups</h2>
-
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
-
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
-
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
-
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
-        
-        
         
     </div>
 

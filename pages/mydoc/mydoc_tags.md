@@ -2,9 +2,9 @@
 title: Tags
 audience: writer, designer
 tags: [navigation]
-last_updated: July 16, 2016
+last_updated: July 16, 2018
 keywords: tags, navigation, buttons, links, association
-summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
+summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Writarium theme is somewhat of a manual process."
 sidebar: mydoc_sidebar
 permalink: mydoc_tags.html
 folder: mydoc
@@ -29,7 +29,7 @@ tags: [formatting, single_sourcing]
 To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \_data/tags.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
 
 
-{% include note.html content="In contrast to WordPress, with Jekyll to get tags on pages you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual." %}
+{% include note.html content="In contrast to WordPress, with Writarium to get tags on pages you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Writarium are much more manual." %}
 
 Additionally, you must create a tag archive page similar to the other pages named tag_{tagname}.html folder. This theme doesn't auto-create tag archive pages.
 

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="You have the flexibility of writing applications targeting Windows Mobile 5.0, Windows Mobile 2003 Second Edition, and Smart phone devices. As with any  plat...">
+<meta name="keywords" content="devices supportedsupported devices,  devices, supported, supported devices">
+<!-- <title>Supported devices | Welcome to Writarium's Online Help</title> -->
+<title>Supported devices</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Supported devices page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Supported devices">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -246,7 +246,7 @@
           
           
           
-          <li><a href="mydoc_supported_devices.html">Supported Devices</a></li>
+          <li class="active"><a href="mydoc_supported_devices.html">Supported Devices</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">Supported devices</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">You have the flexibility of writing applications targeting Windows Mobile 5.0, Windows Mobile 2003 Second Edition, and Smart phone devices. As with any  platform, there are development considerations that must be taken into account. </div>
    
 
     
@@ -469,35 +469,25 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
+  <p>For Windows Mobile 5.0 devices, you need to have their components and CAB files signed if you write an application and rebuild the Deployment Manager CAB files. This certificate issue is not limited to components, but is an issue for any components (including your own or other third parties’) that are not signed.</p>
+<ul>
+  <li>For Windows Mobile 5.0 devices, you need to have their components and CAB files signed if you write an application and rebuild the Deployment Manager CAB files. This certificate issue is not limited to components, but is an issue for any components (including your own or other third parties’) that are not signed.</li>
+  <li>For Smart phones, the recommended software for Windows Mobile development is Microsoft Visual Studio 2005. If you are using any other tools in addition to Microsoft Visual Studio 2005, special care must be taken to install the development tools in the correct order.</li>
+</ul>
 
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
+<h2 id="windows-50-pocket-pc">Windows 5.0 Pocket PC</h2>
 
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
+<p>The Application Designer fully supports the ability for application developers to create smart applications on the new Windows Mobile 5.0 Pocket PC (PPC) devices. A Windows Mobile device is a hand held device powered by the Windows Mobile platform. It allows you to retrieve e-mail, track your schedule, maintain your contacts, browse the Internet, and send or receive text messages. Windows Mobile also allows you to download third-party software to customize your device.</p>
 
-<ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
-</ol>
+<p>Businesses use Windows Mobile devices to help their employees communicate while they are out of the office. The Windows Mobile platform is available on a variety of devices from a variety of wireless operators. For more information on Windows Mobile devices, see http://www.microsoft.com/windowsmobile/default.mspx.</p>
 
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
+<h2 id="windows-2003-second-edition">Windows 2003 Second Edition</h2>
 
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
+<p>Windows Mobile 2003 Second Edition is a handhold device that has a number of improvements over Windows Mobile 2003. Besides being powered by the latest Windows CE 4.21, other advancements include the support for Wi-Fi Protected Access, an option in Pocket Internet Explorer to scroll vertically by forcing a page into a sing-column layout, and the support for a screen resolution of 640*480. Besides Pocket Word and Pocket Excel, other applications include, Pocket Internet Explorer, Windows Media Player 9 Series for Pocket PC, and Pocket MSN.</p>
 
-<h2 id="users-and-groups">Users and Groups</h2>
+<h2 id="smart-phones">Smart phones</h2>
 
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
-
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
-
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
-
+<p>A Smart phone is a hand held device that combines the features of a mobile phone, personal digital assistant (PDA), and hand held computer. This is something like adding basic telephone functions to a PDA or adding PDA functions to a mobile phone. You can also install additional applications, such as those built with the Composer tool, on a Smart phone, on a Smart phone.</p>
 
 
     <div class="tags">
@@ -506,7 +496,7 @@ $('#toc').on('click', 'a', function() {
         
         
         
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
+        
         
         
         

@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="The Application Administrator tool Guide provides information about using Application Administrator tool to configure system-level administrator options on t...">
+<meta name="keywords" content=" documentation scope, audience, documentation scope">
+<!-- <title>Documentation scope and audience | Welcome to Writarium's Online Help</title> -->
+<title>Documentation scope and audience</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Documentation scope and audience page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Documentation scope and audience">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -232,7 +232,7 @@
           
           
           
-          <li><a href="mydoc_scope_audience.html">Documentation scope and audience</a></li>
+          <li class="active"><a href="mydoc_scope_audience.html">Documentation scope and audience</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">Documentation scope and audience</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">The Application Administrator tool Guide provides information about using Application Administrator tool to configure system-level administrator options on the Application Server. System administrator tasks include configuring data sources, security, and logging. This guide is intended for system administrators who configure applications, data sources, security, and logging using the Application Administrator tool.</div>
    
 
     
@@ -469,46 +469,60 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
+  <h2 id="identifying-references">Identifying References</h2>
+<p>The Mobile Application Platform documentation suite includes the following:</p>
+<ul>
+  <li>Mobile Application Platform Installation Guide: This guide provides information about installing the Mobile Application Platform.</li>
+  <li>Application Server Configuration Guide: This guide provides information about configuring the Application Server and metadata database.</li>
+  <li>Mobile Application Platform Release Notes: This guide provides information about various features and known issues in the Mobile Application Platform. It also provides the version number information of various Mobile Application Platform components.</li>
+  <li>Adapter DesignerGuide: This guide provides information about creating and editing Connections, Commands, Data Objects, and Views.</li>
+  <li>Application Designer Guide: This guide provides information about using the Application Designer to design forms for applications that are deployed to handheld devices, such as the Pocket PC (PPC), and used by field personnel.</li>
+  <li>Deployment Manager Guide for PC: This guide provides information about the procedures required to prepare a Pocket PC application for mass distribution to field personnel.</li>
+  <li>Deployment Guide for Windows Mobile Devices: This guide provides information about the procedures required to prepare a PDA application for mass distribution to field personnel.</li>
+  <li>Smart Client API Reference: This guide provides information about how to write applications by using the constants and data types.</li>
+</ul>
 
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
+<h2 id="terms-acronyms-and-abbreviations">Terms, Acronyms, and Abbreviations</h2>
+<p>The table contains some definitions of terms and acronyms that are used within this guide.</p>
 
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
-
-<ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
-</ol>
-
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
-
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
-
-<h2 id="users-and-groups">Users and Groups</h2>
-
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
-
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
-
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>Definition</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SSL</td>
+      <td>Secure Socket Layer</td>
+    </tr>
+    <tr>
+      <td>Simple Object Access Protocol (SOAP)</td>
+      <td>SOAP is a protocol for exchanging XML based messages over a computer network. It enables messaging over HTTP on port 80 and uses a standard means of describing data.</td>
+    </tr>
+    <tr>
+      <td>User Interface (UI)</td>
+      <td>UI refers to the front end of the software, which provides a simple and easy to use interface between a computer and an application. An example is the Connection User Interface used to connect the adapter to the server.</td>
+    </tr>
+    <tr>
+      <td>Universal Description, Discovery, and Integration (UDDI)</td>
+      <td>UDDI enables organizations and individuals to publish information about themselves and the Web services they are offering. It is a global directory open to everybody, simple to use, and comprehensive in its scope.</td>
+    </tr>
+    <tr>
+      <td>Web Services</td>
+      <td>A Web service is a collection of protocols and standards used for exchanging data between applications or systems. It provides a standardized way of integrating Web-based applications using the XML, SOAP, WSDL, and UDDI open standards over an Internet protocol backbone.</td>
+    </tr>
+    <tr>
+      <td>Web Service Description Language (WSDL)</td>
+      <td>WSDL describes the public interface to the Web Service. This is an XML based service description on how to communicate using the Web Service; namely the protocol bindings and message formats required to interact with the Web services listed in its directory.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
-        
-        
         
     </div>
 

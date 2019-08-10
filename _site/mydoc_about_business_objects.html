@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="Business objects are a very prominent part of the Application Designer and its components. To develop flawless applications, one must have an exhaustive know...">
+<meta name="keywords" content="business_objects,  business objects, object, objects">
+<!-- <title>About business objects | Welcome to Writarium's Online Help</title> -->
+<title>About business objects</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the About business objects page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="About business objects">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -308,7 +308,7 @@
           
           
           
-          <li><a href="mydoc_about_business_objects.html">About business ohjects</a></li>
+          <li class="active"><a href="mydoc_about_business_objects.html">About business ohjects</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">About business objects</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">Business objects are a very prominent part of the Application Designer and its components. To develop flawless applications, one must have an exhaustive knowledge of business objects, creating it, and understanding the various events associated with it.</div>
    
 
     
@@ -469,35 +469,17 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
+  <h2 id="understanding-business-objects">Understanding Business Objects</h2>
 
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
+<p>A business object represents a specific type of data used by the application. Examples include product, product number, appointment, and so forth. Business objects defined and modified using Application Administrator tool are physically stored in the metadata repository.</p>
 
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
+<p>This version of a business object packages data source metadata that is passed to the device and then manipulated by your small factor application’s public class BusinessObject statement(s). Unlike the BusinessObject class, however, a business object does not contain any business logic. The business logic is completely contained in your Visual Basic code.</p>
 
-<ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
-</ol>
-
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
-
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
-
-<h2 id="users-and-groups">Users and Groups</h2>
-
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
-
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
-
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
-
+<p>The metadata repository contains the schema for the business objects, business rules, business constants, views, and columns used by the Application Server. The metadata repository is stored in a SQL Server database. When the Pocket PC user selects the Settings, Subscribe tab, and Get Customer Data Definition option, the metadata b_mac database is created and populated with data from the metadata repository. Any defined business objects are used to create the b_mac table definitions. 
+The following figure illustrates the relationship between business objects and views, and between business object properties and view columns.
+<a data-fancybox="gallery" href="images/app-server-and-views.png" title="click to enlarge" alt="application server and view">
+<img src="images/app-server-and-views.png" style="width: 300;" />
+</a></p>
 
 
     <div class="tags">
@@ -505,8 +487,6 @@ $('#toc').on('click', 'a', function() {
         <b>Tags: </b>
         
         
-        
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
         
         
         

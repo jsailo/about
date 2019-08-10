@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="Business rules enable you to apply consistent logic to your business data.">
+<meta name="keywords" content=" logging on, logging on application administrator tool">
+<!-- <title>About business Rules and Constants | Welcome to Writarium's Online Help</title> -->
+<title>About business Rules and Constants</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the About business Rules and Constants page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="About business Rules and Constants">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -331,7 +331,7 @@
           
           
           
-          <li><a href="mydoc_business_rules_constants.html">About business rules and constants</a></li>
+          <li class="active"><a href="mydoc_business_rules_constants.html">About business rules and constants</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">About business Rules and Constants</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">Business rules enable you to apply consistent logic to your business data.</div>
    
 
     
@@ -469,46 +469,66 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
+  <p>In general, business rules define:</p>
 
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
+<ul>
+  <li>
+    <p><strong>How data is handled when it is manipulated</strong> (inserted, updated, saved,     reverted, located, or deleted)<strong>:</strong> Take, for example, a business rule that,     on a save action, checks a service estimate against the contact of the     customer monetary authorization limit. This type of business rule is     triggered by a business object event that is associated with a     business objects using the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p><strong>How data is handled when it is validated:</strong> Take, for example, a business     rule that verifies that there are nine digits in a social security number or     that a company has required identification code has been entered.</p>
+  </li>
+  <li>
+    <p><strong>How data integrity is handled:</strong> For primary keys of type String, for     example, your business rule can ensure that the key remains unique.</p>
+  </li>
+</ul>
 
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
+<p>Business rules enable the functionality defined in your .NET source code. For example, the JobTitleRequired business constant can be set to True or False. However, the logic that actually checks to verify whether a Job Title must be provided and what happens if the job title is not provided is enabled by a business rule. In this case, an event triggers the business rule, and then business constant, to be evaluated. Use the Application Administrator tool to specify the business rule that would be started either before or after any of the above events.</p>
 
-<ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
-</ol>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The logic used to enable a business rule is defined in a DLL, which is developed using VB.NET. The Application Administrator tool is used to define the business rule by referencing the business rule DLL.</div>
 
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Business rule definition information is stored in the metadata database.</div>
 
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
+<h3 id="invoking-business-rules">Invoking Business Rules</h3>
 
-<h2 id="users-and-groups">Users and Groups</h2>
+<p>On the device, a business rule is invoked by your custom code or by a business object event. On the server, a business rule is invoked by an event generator.</p>
 
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
+<h3 id="defining-business-rules">Defining Business Rules</h3>
 
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
+<p>Because business rules use DLLs to enforce rules, business rules are typically created by database administrators or developers using VB.NET.</p>
 
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
+<h3 id="creating-business-rules">Creating Business Rules</h3>
 
+<p>There are two general steps to creating a business rule for use by your small factor application. These are:</p>
+
+<ul>
+  <li>
+    <p>Use Microsoft Visual Studio to create a business rule class. Add Evaluate     and TakeAction code. Compile this into a DLL.</p>
+  </li>
+  <li>
+    <p>Using the Application Administrator tool, name the data manipulation event     that trigger the business rule.</p>
+  </li>
+</ul>
+
+<p>Or you can create an event generator that fires the business rule at a specific time or time interval. For more information, see <a href="##_Defining_Event_Generators">Defining Event Generators</a>.</p>
+
+<h3 id="using-microsoft-visual-studionet-to-create-a-business-rule">Using Microsoft Visual Studio.NET to Create a Business Rule</h3>
+
+<p>Before mapping to a business rule using the Application Administrator tool, you must have already created the business rule class in Microsoft Visual Studio. An example of an address validation business rule is illustrated in the following figure.</p>
+
+<p><img src="images/dot-net-ide.png" /></p>
+
+<p>The AddressValidate business rule shown in the above and in the code following, for example, identifies each required input box and the action to take if the user does not enter a value. In each case, a message (a business constant) is displayed.</p>
+
+<p>In the first line, AddressValidate refers to the Business Rule. This is referenced in the Application Administrator tool as Apps.BusinessRules.AddressValidate (the full namespace of the class file). The second line is necessary, as your business rules must always inherit from BusinessModel.BusinessRule.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Public Class AddressValidate
+
+Inherits BusinessModel.BusinessRule
+</code></pre></div></div>
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
-        
-        
         
     </div>
 

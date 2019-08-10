@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="This page lists common errors and the steps needed to troubleshoot them.">
-<meta name="keywords" content="troubleshooting,  trouble, problems, support, error messages, problems, failure, error,">
-<!-- <title>Troubleshooting | Welcome to Writarium's Online Help</title> -->
-<title>Troubleshooting</title>
+<meta name="description" content="The Application Server automatically collects log history. It can also log Web service metric data if it is configured to do so. This allows you to monitor t...">
+<meta name="keywords" content=" sort logs, sort log, export log, view log">
+<!-- <title>Working with log records | Welcome to Writarium's Online Help</title> -->
+<title>Working with log records</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,7 +169,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Troubleshooting page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Working with log records page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
  -->
@@ -187,7 +187,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Working with log records">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -361,7 +361,7 @@
           
           
           
-          <li><a href="mydoc_viewing_log_records.html">Working with log records</a></li>
+          <li class="active"><a href="mydoc_viewing_log_records.html">Working with log records</a></li>
           
           
           
@@ -377,7 +377,7 @@
           
           
           
-          <li class="active"><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
           
           
           
@@ -427,7 +427,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting</h1>
+   <h1 class="post-title-main">Working with log records</h1>
 </div>
 
 
@@ -435,7 +435,7 @@
 <div class="post-content">
 
    
-    <div class="summary">This page lists common errors and the steps needed to troubleshoot them.</div>
+    <div class="summary">The Application Server automatically collects log history. It can also log Web service metric data if it is configured to do so. This allows you to monitor the transactions that take place and to troubleshoot issues. You can log any of the services that comprise the Application Server and log metrics for the Web methods used by the Web services.<br> Logging information is stored in the `m_log` table of the `MASMetadata` database. Metrics are stored in the `m_metric` table.</div>
    
 
     
@@ -469,46 +469,90 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="conflict-resolutions">Conflict Resolutions</h2>
-
-<h3 id="viewing-and-resolving-conflicts">Viewing and Resolving Conflicts</h3>
-
-<p>As an administrator, you can view a list of conflicts queued for manual resolution. As new conflicts arise, you can also be sent an e-mail notification. To view conflict details and select the object value and perform the following steps.</p>
+  <p>The Logs page displays information about all logs currently stored in the log file. The logs can be sorted by log level, category, server name, thread ID, timestamp, or the IP address. To maintain a more meaningful log, you can delete any records containing a specific log level, category, server name, user name, thread ID, or timestamp.</p>
+<h2 id="to-view-log-information">To view log information</h2>
 
 <ol>
-  <li>Start the Application Administrator tool.</li>
-  <li>Under the Logging category in the left pane, select Conflicts. The Conflicts page opens.</li>
-  <li>Click a Resolve link to display details about that conflict.</li>
-  <li>Click the update in the Current column to highlight it and display additional information about the conflict. Click a username (#) column to the right of the Current column to highlight it. Review the data in the columns to determine which update should prevail.</li>
-  <li>To select the winning update, highlight that column and click the Save icon.</li>
-  <li>Continue the steps above to resolve additional record conflicts.</li>
+  <li>
+    <p>Start the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p>Under the Logging category in the left pane, select <strong>Logs</strong>. The Logs page     opens. By default, log records are sorted by timestamp.</p>
+  </li>
 </ol>
 
-<h3 id="unable-to-initializing-logging-on-the-client-application">Unable to initializing logging on the client application</h3>
+<h2 id="to-sort-the-log">To sort the log</h2>
 
-<p>The client logging feature writes debug information to a log file on the Pocket PC. For details about the code change needed in your Pocket PC application to accommodate this functionality, see <a href="mydoc_defining_business_objects.html">Defining Business Objects.</a></p>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> You can sort the log alphabetically (in descending or ascending order). You can also sort by level, category, server, user, thread ID, or timestamp. Click the appropriate column name and then click for a second time to sort the column in the opposite order.</div>
 
-<h2 id="users-and-groups">Users and Groups</h2>
+<h2 id="to-limit-records-displayed-in-the-log">To limit records displayed in the log</h2>
 
-<h3 id="im-cannot-change-a-users-password-using-the-application-administrator-tool">I’m cannot change a user’s password using the Application Administrator tool</h3>
+<ol>
+  <li>
+    <p>Start the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p>Under the Logging category in the left pane, select <strong>Logs</strong>. The Logs page     opens.</p>
+  </li>
+  <li>
+    <p>In the <strong>Page Size</strong> textbox, enter the number of log records that will be     recorded to a page, for printing purposes. The minimum size is 100 and the     maximum is 500.</p>
+  </li>
+  <li>
+    <p>To show only those logs matching a specific level, category, server name,     thread ID, or timestamp, specify the unique search criteria in the text box     above the appropriate column heading. (The format must match the data     format. For example, timestamp must use the format mm-dd hh:mm:ss where the     time portion is in GMT format). In the case of level or category, select     from the drop down. Click the <strong>Find</strong> icon.</p>
+  </li>
+  <li>
+    <p>To redisplay all log records, set the level and category lists to the blank     selection (at the top of the list selections) and clear the server, message,     thread ID, and timestamp text boxes.</p>
+  </li>
+  <li>
+    <p>Click the <strong>Find</strong> icon.</p>
+  </li>
+</ol>
 
-<p>When you import a user, the password is only defined in the LDAP directory or Active directory. To change the password, you muse change it in the LDAP or the Active directory. A user must also be added to a security group before the user can log on to the Application Administrator tool;</p>
+<h2 id="to-export-the-log-to-a-delimited-txt-file">To export the log to a delimited .txt file</h2>
 
-<h3 id="im-unable-to-disable--permissions-for-imported-users">I’m unable to disable  permissions for imported users</h3>
-<p>You must define a user in the <em>m_user</em> table of the <em>MASMetadata</em> database to disable the imported user. Importing users from LDAP or Active Directory into the <em>m_user</em> table allows you the ability to enable or disable these user accounts.</p>
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> A disabled user is not authorized to access data on the mobile application, and when a disabled user attempts to access data, an alert message is displayed.</div>
+<ol>
+  <li>
+    <p>Start the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p>Under the Logging category in the left pane, select <strong>Logs</strong>. The Logs page     opens.</p>
+  </li>
+  <li>
+    <p>(Optional) To show only those logs matching a specific level, category,     server name, thread ID, or timestamp, specify the unique search criteria in     the text box above the appropriate column heading. (The format must match     the data format. For example, timestamp must use the format mm-dd hh:mm:ss     where the time portion is in GMT format). In the case of level or category,     select from the drop down. Click the <strong>Find</strong> icon.</p>
+  </li>
+  <li>
+    <p>Click the Export icon.</p>
+  </li>
+  <li>
+    <p>In the <strong>Export Log by Search Criteria dialog</strong> box, click the <strong>OK</strong>     button.</p>
+  </li>
+  <li>
+    <p>In the <strong>File Download</strong> dialog box, click <strong>Save</strong>.</p>
+  </li>
+  <li>
+    <p>In the <strong>Save</strong> dialog box, navigate to the directory to which you want the     log file downloaded, name the log file, and then click the <strong>Save</strong> button.</p>
+  </li>
+</ol>
 
+<h2 id="to-permanently-delete-records-from-the-log">To permanently delete records from the log</h2>
+
+<ol>
+  <li>
+    <p>Start the Application Administrator tool.</p>
+  </li>
+  <li>
+    <p>Under the Logging category in the left pane, select <strong>Logs</strong>. The Logs page     opens.</p>
+  </li>
+  <li>
+    <p>To permanently delete log records matching a specific level, category,     server name, thread ID, or timestamp, specify the unique delete criteria in     the text box above the appropriate column heading. (The format must match     the data format. For example, timestamp must use the format mm-dd hh:mm:ss     where the time portion is in GMT format). In the case of level or category,     select from the drop down.</p>
+  </li>
+  <li>
+    <p>Click the <strong>Delete</strong> icon.</p>
+  </li>
+</ol>
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_troubleshooting.html" class="btn btn-default navbar-btn cursorNorm" role="button">troubleshooting</a>
-        
-        
         
     </div>
 
