@@ -265,10 +265,6 @@ entries:
     output: web
     folderitems:
 
-    - title: Tag archives overview
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
       subfolders:
       - title: Application Administrator tool
         output: web
@@ -302,4 +298,3 @@ entries:
         - title: Defining a business constant
           url: /mydoc_defining_business_constants.html
           output: web, pdf
-
