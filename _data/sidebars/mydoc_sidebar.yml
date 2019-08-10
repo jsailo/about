@@ -265,12 +265,12 @@ entries:
     output: web
     folderitems:
 
-    - title: Subfolder One
+    - title: Tag archives overview
       url: /mydoc_tag_archives_overview.html
       output: web
 
       subfolders:
-      - title: Tag archive pages
+      - title: Subfolder One
         output: web
         subfolderitems:
 
@@ -301,12 +301,8 @@ entries:
         - title: Troubleshooting pages
           url: /tag_troubleshooting.html
           output: web
-    - title: Subfolder Two
-      url: /mydoc_tag_archives_overview.html
-      output: web
 
-      subfolders:
-      - title: Tag archive pages
+      - title: Subfolder Two
         output: web
         subfolderitems:
 
