@@ -70,7 +70,7 @@ summary: This page highlights the software tools I have used for documentation a
 - Updated and created new articles in Microsoft&#39;s Knowledge Base (KB) for issues resolved
 - Consistently rated 10/10 in customer surveys
 
-### Department of Industries, Government of Mizoram (September 1999 - August 2003) – Web and Content Developer
+### Department of Industries, Government of Mizoram (September 1999 - August 2003)
 
 - Worked with the Industries department (IT Cell - E-governance) in the capacity of a web developer and content writer to create the official website of the government of Mizoram - http://mizoram.gov.in, a public service portal for the dissemination of general information about Mizoram and government related projects for the general public.
 
@@ -85,7 +85,7 @@ Setup NextComm as a business partner, which provided IT software and hardware so
 
 ## Education and Personal Dossier
 
-- **Education:** Bachelor of Arts (English Hons)
+- **Education:** Bachelor of Engg (Mechanical) , Bachelor of Arts (English Hons)
 - **Language Proficiency:** English, Hindi, and Mizo
 
 {% include links.html %}
