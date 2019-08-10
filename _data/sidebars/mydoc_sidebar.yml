@@ -274,33 +274,22 @@ entries:
         output: web
         subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web
+        - title: Introduction
+          url: /index.html
+          output: web, pdf
+          type: homepage
 
-        - title: Navigation pages
-          url: /tag_navigation.html
-          output: web
+        - title: Documentation scope and audience
+          url: /mydoc_scope_audience.html
+          output: web, pdf
 
-        - title: Content types pages
-          url: /tag_content_types.html
-          output: web
+        - title: Installation Requirements
+          url: /mydoc_installation_rqmts.html
+          output: web, pdf
 
-        - title: Publishing pages
-          url: /tag_publishing.html
-          output: web
-
-        - title: Special layout pages
-          url: /tag_special_layouts.html
-          output: web
-
-        - title: Collaboration pages
-          url: /tag_collaboration.html
-          output: web
-
-        - title: Troubleshooting pages
-          url: /tag_troubleshooting.html
-          output: web
+        - title: Supported Devices
+          url: /mydoc_supported_devices.html
+          output: web, pdf
 
       - title: Subfolder Two
         output: web
