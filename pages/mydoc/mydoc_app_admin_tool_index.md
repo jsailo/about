@@ -2,7 +2,7 @@
 title: "Introduction"
 keywords: Introduction
 sidebar: mydoc_sidebar
-permalink: index.html
+permalink: mydoc_app_admin_tool_index.html
 summary: "The Application Administrator tool is just one part of a larger system called the Mobile Application Platform. The following figure illustrates how the Platform and Tools work together."
 ---
 
